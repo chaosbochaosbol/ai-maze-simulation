@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Maze Simulation</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="scene"></canvas>
+    <div id="hud">
+      <div class="hud-row">
+        <div>Episode Time: <span id="episodeTime">0.0</span>s</div>
+        <div>Red Wins: <span id="redWins">0</span></div>
+        <div>Blue Wins: <span id="blueWins">0</span></div>
+      </div>
+      <div class="hud-row">
+        <div>Speed: <span id="speedDisplay">x1</span></div>
+        <div>Exploration: <span id="epsilon">0.20</span></div>
+        <div>Episode: <span id="episodeIndex">1</span></div>
+      </div>
+      <div class="hud-row controls">
+        <button id="toggleSim">Start</button>
+        <button id="resetLearning">Reset Learning</button>
+        <button class="speed" data-speed="1">x1</button>
+        <button class="speed" data-speed="5">x5</button>
+        <button class="speed" data-speed="20">x20</button>
+        <label class="debug-toggle">
+          <input type="checkbox" id="debugToggle" />
+          Debug
+        </label>
+      </div>
+      <div class="hud-row info">
+        <div>Red state: <span id="redState">-</span></div>
+        <div>Blue state: <span id="blueState">-</span></div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
